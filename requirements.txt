@@ -1,1 +1,7 @@
-rasa
+rasa==3.0.8
+sanic==21.6.0
+Sanic-Cors==1.0.0
+sanic-jwt==1.7.0
+sanic-plugin-toolkit==1.2.1
+Sanic-Plugins-Framework==0.9.5
+sanic-routing==0.7.0
