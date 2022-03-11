@@ -1,0 +1,172 @@
+version: "3.0"
+
+nlu:
+- intent: goodbye
+  examples: |
+    - baii
+    - bye
+    - không hẹn gặp lại
+    - tôi đi đây
+    - hẹn gặp lại nhé
+    - nào có việc nhờ tiếp nhé
+    - có gì gặp lại sau
+    - so long
+    - tạm biệt bot, hẹn gặp lại nha
+    - goodbye
+    - ta đi đây
+    - bye bye
+    - bye nhé
+    - see you
+    - tạm biệt nhé
+    - tam biet
+    - pp
+    - tạm biệt
+
+- intent: affirm
+  examples: |
+    - yes
+    - đúng thế
+    - chuẩn
+    - đúng ý
+    - cũng đúng
+    - hợp ný
+    - đúng vậy
+    - uh
+    - ok bro
+    - chuẩn rồi
+    - chuẩn gòi
+    - that rights
+    - chấp nhận
+    - that right
+    - tôi đồng ý
+    - đúng rồi
+    - 1990
+    - tôi chấp nhận
+    - right
+    - ok
+    - okie
+    - ổn rồi
+    - okela
+    - uk
+    - hình như thế
+    - mình đồng ý
+    - chuẩn lun
+    - yeah
+    - dạ
+    - đúng rồi bạn ơi
+    - đúng
+    - chuẩn đấy
+    - yessss
+    - uhm
+    - hợp lí
+    - okey
+    - đúng rầu
+    - chuẩn không cần chỉnh
+    - được đấy
+    - hợp lý
+    - vâng
+
+- intent: deny
+  examples: |
+    - sai bét
+    - sai sai
+    - kô
+    - fasle
+    - cần cải thiện
+    - toang rồi
+    - chán vậy
+    - chưa đúng lắm
+    - không đồng ý
+    - không đúng
+    - sai rồi
+    - không chấp nhận
+    - mình không đồng ý
+    - không đúng ý mình rồi
+    - ko
+    - không ổn lắm
+    - no
+    - ko phải
+    - hình như chưa đúng
+    - sai
+    - ngu vl
+    - incorrect
+    - chưa đúng
+    - không có
+    - chẳng đúng
+    - không hợp lý
+    - không phải
+    - chưa ổn lắm
+    - k hợp lý
+    - chưa chuẩn
+    - wrong
+    - không
+    - chưa
+    - khong
+
+- intent: thank
+  examples: |
+    - cảm ơn nhé
+    - thank bạn nha
+    - tks
+    - cảm ơn bot
+    - đa tạ
+    - thank you
+    - thank bot
+    - t cảm ơn nhiều
+    - cảm ơn
+    - thanks
+    - cảm ơn nhiều heng
+    - thank
+    - thks bot
+    - xin cảm ơn
+    - cảm tạ
+    - vô cùng cảm ơn
+    - cám ơn
+    - t cảm ơn nhé
+    
+- intent: greet
+  examples: |
+    - hey
+    - cần tư vấn
+    - chào
+    - bot ơi
+    - good morning
+    - alooo
+    - aloo
+    - b ơi
+    - helloooo
+    - cúc cu
+    - good night
+    - hello there
+    - bạn ơi
+    - chào buổi chiều
+    - chào bot
+    - good afternoon
+    - xin chào
+    - chào buổi trưa
+    - 9h tối
+    - tôi cần hỗ trợ
+    - chào m
+    - hi bạn
+    - chào mày
+    - good evening
+    - chào em
+    - hi
+    - chào bạn
+    - hello
+    - ê
+    - xin chao
+    - alo
+    - chào buổi sáng
+    - chào buổi tối
+
+    
+- intent: inform
+  examples: |
+    - [đau ngực](symptom)
+    - [tức ngực](symptom)
+    - [nhức đầu](symptom)
+    - [sốt](symptom)
+    - [mệt mỏi](symptom)
+    - [chán ăn](symptom)
+    - [đau bụng]](symptom)

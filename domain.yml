@@ -1,0 +1,262 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - inform
+
+entities:
+  - symptom
+  - period
+  - duration
+
+slots:
+  gender:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: user_info_form
+        requested_slot: gender
+  age:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: user_info_form
+        requested_slot: age
+  
+  chest_pain:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  fever:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  headache:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  short_period:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  medium_period:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  long_period:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  short_duration:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  medium_duration:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  long_duration:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+  - text: "Xin chào, tôi là Chatbot kiểm tra sức khỏe. Dựa trên tình trạng sức khỏe của ông/bà tôi sẽ gợi ý cho ông/bà dịch vụ chăm sóc y tế phù hợp. \n  \n Hệ thống này không dùng để chẩn đoán hoặc điều trị bệnh. Để tiếp tục sử dụng công cụ này, vui lòng đồng ý rằng ông/bà đã đọc và hiểu nội dung của tuyên bố từ chối trách nhiệm này."
+    buttons:
+    - payload: /affirm
+      title: Tôi đồng ý
+    - payload: /deny
+      title: Tôi không đồng ý
+
+  utter_bye:
+  - text: 'Cảm ơn ông/bà đã sử dụng dịch vụ, nếu ông/bà muốn kiểm tra tình trạng sức khỏe hãy nhập "hi" để bắt đầu'
+
+  utter_introduction:
+  - text: "Tôi sẽ hỏi ông/bà một số câu hỏi. Tôi sẽ sử dụng câu trả lời của ông/bà để đưa ra lời khuyên về mức độ chăm sóc y tế mà ông/bà nên tìm kiếm.  \n  \nNếu ông/bà đang gặp trường hợp khẩn cấp đe dọa tính mạng, vui lòng gọi 115 ngay lập tức."
+  
+  utter_ask_gender:
+  - text: Giới tính của ông/bà là gì?
+    buttons:
+      - payload: /inform
+        title: Nam
+      - payload: /inform
+        title: Nữ
+      - payload: /inform
+        title: Tôi không biết
+
+  utter_ask_age:
+  - text: Ông/bà hãy nhập số tuổi của mình?
+
+  utter_ask_chief_complaint:
+  - text: Triệu chứng nào đang làm ông/bà cảm thấy khó chịu nhất?
+    buttons:
+      - payload: '/inform{{"symptom":"chest_pain"}}'
+        title: Đau ngực
+      - payload: '/inform{{"symptom":"fever"}}'
+        title: Sốt
+      - payload: '/inform{{"symptom":"headache"}}'
+        title: Đau đầu
+
+
+################################# CHEST PAIN ##################################
+  utter_suspected_heart_attack:
+  - text: Ông/bà có nghi ngờ rằng có một cơn đau tim đang xảy ra?
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_warning_heart_attack:
+  - text: "Nếu Ông/bà nghĩ rằng mình đang bị đau tim, hãy gọi cấp cứu 115 ngày lập tức, ngay cả khi Ông/bà không chắc chắn về điều này. 
+  Đừng chờ đợi để xem các triệu chứng có giảm đi không.  \n  \n
+  Tuy nhiên, Ông/bà không nên tự lái xe đến bệnh viện mà hãy gọi cấp cứu, các nhân viên y tế sẽ tới đón Ông/bà và tiến hành kiểm tra, xử lý ngay lập tức. 
+  Một phản ứng nhanh có thể cứu sống Ông/bà."
+
+  utter_chest_pain_warning_signs:
+  - text: "Ông/bà có một trong những dấu hiệu sau đây không?  \n  \n
+          - Đau dữ dội hoặc đau thắt ngực  \n  \n
+          - Khó thở  \n  \n
+          - Đổ mồ hôi  \n  \n
+          - Buồn nôn hoặc nôn mửa  \n  \n
+          - Đau ở lưng, cổ, hàm, bụng trên, hoặc một trong hai vai hoặc cánh tay  \n  \n
+          - Chóng mặt hoặc ngất xỉu  \n  \n
+          - Cảm giác nhịp tim nhanh hoặc không đều"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_chest_pain_emergency:
+  - text: "Ông/bà đang có những dấu hiệu nguy hiểm tới tính mạng. Tuỳ vào dấu hiệu mà ông/bà có thể mắc một số bệnh lý nguy hiểm tới tính mạng sau:  \n  \n
+          - Hội chứng vành cấp  \n  \n
+          - Tách thành động mạch chủ ngực  \n  \n
+          - Tràn khí màng phổi áp lực  \n  \n
+          - Thủng thực quản  \n  \n
+          - Tắc mạch phổi  \n  \n
+          Ông bà nên gọi dịch vụ cấp cứu (115) hoặc nhờ người đưa đến phòng cấp cứu càng nhanh càng tốt. Ông/bà không nên cố gắng tự đến bệnh viện."
+
+  utter_chest_pain_progression:
+  - text: Cơn đau ngực có dần trở nên tồi tệ hơn hoặc diễn ra với tần suất nhiều hơn không?
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_chest_pain_hospitalize_1:
+  - text: "Ông/bà nên tới bệnh viện càng sớm càng tốt bởi vì các tình trạng của ông/bà đang trở nên tệ hơn thì nhiều khả năng đây là dấu hiệu của các bệnh lý đặc biệt nguy hiểm, nên kịp gặp bác sĩ để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_chest_pain_hospitalize_2:
+    - text: "Biểu hiện đau ngực kéo dài vài phút đến vài giờ có khả năng do các bệnh lý nguy hiểm như bệnh lý tim mạch, bệnh lý phổi màng phổi, bệnh lý vùng thành ngực.  \n  \n
+            Ông/bà nên tới bệnh viện càng sớm càng tốt để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_chest_pain_hospitalize_3:
+    - text: "Đau ngực về đêm có thể là một trong những đặc điểm của hội chứng vành cấp, suy tim hoặc co thắt động mạch vành.  \n  \n
+            Ông/bà nên tới bệnh viện càng sớm càng tốt để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_chest_pain_period:
+  - text: "Cơn đau ngực của ông/bà thường diễn ra trong bao lâu?"
+    buttons:
+      - payload: '/inform{{"period":"short_period"}}'
+        title: Khoảng 5 giây
+      - payload: '/inform{{"period":"medium_period"}}'
+        title: Khoảng 1 phút
+      - payload: '/inform{{"period":"long_period"}}'
+        title: Trong vài phút đến vài giờ
+
+  utter_chest_pain_virtual_care_1:
+  - text: "Biểu hiện đau ngực thoáng qua(khoảng 5 giây) có khả năng do các bệnh thông thường như ăn uống khó tiêu. Tuy nhiên chúng tôi cũng không loại trừ các khả năng do bệnh lý nguy hiểm như bệnh lý tim mạch, bệnh lý phổi màng phổi, bệnh lý vùng thành ngực.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_chest_pain_virtual_care_2:
+  - text: "Biểu hiện đau ngực thoáng qua(khoảng 5 giây) có khả năng do các bệnh thông thường như ăn uống khó tiêu. Tuy nhiên với triệu chứng đau ngực ở người lớn tuổi(> 55 tuổi) thì xác suất mắc các bệnh lý nghiêm trọng gây đe dọa tính mạng rất cao.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_chest_pain_virtual_care_3:
+  - text: "Biểu hiện đau ngực của ông/bà nhiều khả năng có nguồn gốc cơ xương. Tuy nhiên, chúng tôi cũng không loại trừ khả năng nguyên nhân do các bệnh lý thuộc hệ thống tiêu hóa hoặc ung thư.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_chest_pain_virtual_care_4:
+  - text: "Biểu hiện đau ngực của ông/bà nhiều khả năng có nguồn gốc cơ xương. Tuy nhiên với triệu chứng đau ngực ở người lớn tuổi(> 55 tuổi) thì xác suất mắc các bệnh lý nghiêm trọng gây đe dọa tính mạng rất cao.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_chest_pain_virtual_care_5:
+  - text: "Biểu hiện đau ngực của ông bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm. Tuy nhiên với triệu chứng đau ngực ở người lớn tuổi(> 55 tuổi) thì xác suất mắc các bệnh lý nghiêm trọng gây đe dọa tính mạng rất cao.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_chest_pain_at_night:
+  - text: "Cơn đau ngực có diễn ra về đêm hay không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_chest_pain_duration:
+  - text: "Ông/bà đã bị đau ngực trong thời gian bao lâu rồi?"
+    buttons:
+      - payload: '/inform{{"duration":"short_duration"}}'
+        title: Ít hơn 1 tuần
+      - payload: '/inform{{"duration":"long_duration"}}'
+        title: Hơn 1 tuần
+
+  utter_chest_pain_related_symptom:
+  - text: "Ông/bà có các triệu chứng kèm theo như sốt và ho không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_chest_pain_self_treatment:
+  - text: "Biểu hiện đau ngực của ông bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm, tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+    Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+actions:
+  - action_extract_symptom
+  - action_extract_period
+  - action_chest_pain_risk_factor
+  - action_extract_duration
+
+forms:
+  user_info_form:
+    required_slots:
+        - age
+        - gender
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
