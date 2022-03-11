@@ -5,8 +5,8 @@
 Clone this repo and install the dependencies:
 
 ```bash
-git clone https://gitlab.com/phamnam.mta/sani.git
-cd sani
+git clone https://github.com/phamnam-mta/symptom-checker.git
+cd symptom-checker
 pip install -r requirements.txt
 ```
 
