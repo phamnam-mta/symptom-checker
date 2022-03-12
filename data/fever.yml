@@ -1,0 +1,13 @@
+version: "3.0"
+
+stories:
+- story: fever-1
+  steps:
+  - checkpoint: fever
+  - intent: inform
+    entities:
+        - fever_level
+  - action: action_extract_fever_level
+  - slot_was_set:
+    - high_fever: true
+  - action: utter_high_fever

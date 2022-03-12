@@ -28,3 +28,25 @@ stories:
     - chest_pain: true
   - action: utter_suspected_heart_attack
   - checkpoint: chest_pain
+
+
+  ################################ FEVER #######################################
+
+- story: General flow - fever
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_introduction
+  - action: user_info_form
+  - active_loop: user_info_form
+  - active_loop: null
+  - action: utter_ask_chief_complaint
+  - intent: inform
+    entities:
+      - symptom
+  - action: action_extract_symptom
+  - slot_was_set:
+    - fever: true
+  - action: utter_fever_level
+  - checkpoint: fever

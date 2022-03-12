@@ -12,7 +12,7 @@ entities:
   - symptom
   - period
   - duration
-
+  - fever_level
 slots:
   gender:
     type: text
@@ -80,6 +80,24 @@ slots:
     - type: custom
   
   long_duration:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  low_fever:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+  
+  medium_fever:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  high_fever:
     type: bool
     influence_conversation: true
     mappings:
@@ -245,12 +263,28 @@ responses:
   - text: "Biểu hiện đau ngực của ông bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm, tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
     Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
 
+################################# CHEST PAIN ##################################
+  utter_fever_level:
+  - text: Mức độ sốt của Ông/bà?
+    buttons:
+      - payload: '/inform{{"fever_level":"low_fever"}}'
+        title: Khoảng 37.5°C đến 39°C
+      - payload: '/inform{{"fever_level":"medium_fever"}}'
+        title: Khoảng 39°C đến 40°C
+      - payload: '/inform{{"fever_level":"high_fever"}}'
+        title: Hơn 40°C
+
+  utter_high_fever: 
+  - text: "Nhiệt độ sốt > 40 độ C hoặc < 35 độ C là một trong các dấu hiệu cảnh báo của Sốt. \n \n
+  Xin hãy đến cơ sở y tế để gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
+
 actions:
   - action_extract_symptom
   - action_extract_period
   - action_chest_pain_risk_factor
   - action_extract_duration
-
+  - action_extract_fever_level
+  
 forms:
   user_info_form:
     required_slots:
