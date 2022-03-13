@@ -278,6 +278,132 @@ responses:
   - text: "Nhiệt độ sốt > 40 độ C hoặc < 35 độ C là một trong các dấu hiệu cảnh báo của Sốt. \n \n
   Xin hãy đến cơ sở y tế để gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
 
+  utter_fever_headache_stiff_neck:
+  - text: "Ông/bà có cảm thấy mình có các dấu hiệu sau: \n \n 
+  - đau đầu \n \n
+  - cứng cổ"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+
+  utter_fever_headache_stiff_neck_out:
+  - text: "Nếu Ông/bà nghĩ rằng mình đang bị nhức đầu, cổ cứng hãy đến cơ sở y tế gần nhất trong 24-48 giờ , ngay cả khi Ông/bà không chắc chắn về điều này.\n \n
+  Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
+  Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng là viêm màng não."
+
+  utter_fever_skin_spot:
+  - text: "Ông/bà có cảm thấy mình nổi đốm đỏ/ban/xuất huyết ở da ?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+
+  utter_fever_skin_spot_out:
+  - text: "Nếu Ông/bà nghĩ rằng mình đang nổi đốm đỏ, ban hoặc xuất huyết ở da hãy đến cơ sở y tế gần nhất trong 24-48 giờ , ngay cả khi Ông/bà không chắc chắn về điều này. \n \n
+  Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
+  Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng là viêm màng não."
+
+  utter_heart_beat:
+  - text: "Ông/bà có mắc một trong các dấu hiệu sau: \n \n 
+    - nhịp tim không đều/nhanh \n \n
+    - thở nhanh \n \n
+    - khó thở"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+
+  utter_heart_beat_out:
+  - text: "Nếu Ông/bà nghĩ rằng mình đang bị nhịp tim nhanh,thở nhanh,khó thở hãy đến cơ sở y tế gần nhất trong 24-48 giờ. \n \n
+  Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
+  Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng về nhiễm khuẩn huyết."
+
+  utter_fever_mental_change:
+  - text: "Ông/bà có mắc một trong các dấu hiệu sau: \n \n 
+    - nhầm lẫn \n \n
+    - hay quên\n \n
+    - sa sút trí tuệ \n \n
+    - tinh thần không ổn định"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+  utter_fever_mental_change_out:
+  - text: "Nếu Ông/bà nghĩ rằng tình trạm tâm thần đang xấu đi hãy đến cơ sở y tế gần nhất trong 24-48 giờ.
+  Đừng chờ đợi để xem các triệu chứng có giảm đi không.
+  Các dấu hiệu cảnh báo trên gợi ý tổn thương thần kinh khi bị Sốt."
+
+  utter_fever_calculate_blood_pressure:
+  - text: "Ông/bà đã đo huyết áp của mình chưa?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Chưa
+
+  utter_fever_blood_pressure:
+  - text: "Ông/bà có cảm thấy huyết áp thấp ?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+  
+  utter_fever_blood_pressure_out:
+  - text: "Huyết áp thấp có nhiều rủi ro cho sức khỏe, có khi còn đe dọa tới tính mạng. \n \n
+  Xin hãy đến cơ sở y tế gần nhất trong 24-48 giờ. \n \n
+  Đây là một trong các dấu hiệu cảnh báo nghiệm trọng của Sốt"
+  
+  utter_fever_relocation:
+  - text: "Trong 2 tuần gần nhất, Ông/bà chuyến đi gần đây đến khu vực có dịch bệnh nghiêm trọng (sốt rét,covid,...)"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+    
+  utter_fever_relocation_out:
+  - text: "Di chuyển đến một số khu vực có dịch bệnh nghiêm trọng là một trong các dấu hiệu cảnh bảo của Sốt, xin hãy cơ sở y tế gần nhất trong 24-48 giờ.\n \n
+  Chúng tôi không loại trừ việc bị: sốt rét, covid nên được nghi ngờ. \n \n
+  Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
+  
+  utter_fever_medication:
+  - text: "Ông/bà gần đây có sử dụng các loại thức ức chế miễn dịch ? \n \n
+  (vd: Corticosteroids,Azathioprine,...)"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+
+  utter_fever_medication_out:
+  - text: "Chúng tôi không loại trừ ông/bà có thể bị suy giảm miễn dịch do rối loạn hay sử dụng thuốc ức chế miễn dịch. \n \n
+  Đây là một trong các dấu hiệu cảnh bảo của Sốt, Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_fever_end_out:
+  - text: "Biểu hiện Sốt của Ông/bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm, \n \n 
+  tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến để được tư vấn kỹ hơn về tình trạng của bản thân. \n \n
+  Nếu kéo dài 3-4 ngày hãy đi khám bất kể có triệu chứng gì"
+
 actions:
   - action_extract_symptom
   - action_extract_period

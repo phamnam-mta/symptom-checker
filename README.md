@@ -16,10 +16,17 @@ Train model by command
 rasa train
 ```
 
-Start rasa and action server
+Start rasa and action server with UI-Webchat
 
 ```bash
 rasa run -m models --enable-api --cors "*" --debug
 rasa run actions
 ```
 Open file `index.html` on web browser to test Chatbot
+
+
+Start rasa locally
+```bash
+rasa run actions
+rasa shell
+```
