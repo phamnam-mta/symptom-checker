@@ -18,7 +18,7 @@ class ActionExtractFeverLevel(Action):
         try:
             last_entities = list(tracker.get_latest_entity_values('fever_level'))
             if last_entities:
-                return [SlotSet(last_entities[0], True)]
+                return [SlotSet("fever_level", last_entities[0])]
 
             return []
         except Exception as ex:

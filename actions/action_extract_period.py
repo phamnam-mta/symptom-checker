@@ -18,7 +18,7 @@ class ActionExtractPeriod(Action):
         try:
             last_entities = list(tracker.get_latest_entity_values('period'))
             if last_entities:
-                return [SlotSet(last_entities[0], True)]
+                return [SlotSet("period", last_entities[0])]
 
             return []
         except Exception as ex:

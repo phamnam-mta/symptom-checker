@@ -13,6 +13,7 @@ entities:
   - period
   - duration
   - fever_level
+
 slots:
   gender:
     type: text
@@ -30,76 +31,44 @@ slots:
       conditions:
       - active_loop: user_info_form
         requested_slot: age
-  
-  chest_pain:
-    type: bool
+
+  symptom:
+    type: categorical
     influence_conversation: true
-    mappings:
-    - type: custom
-  
-  fever:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  headache:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  short_period:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  medium_period:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  long_period:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  short_duration:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  medium_duration:
-    type: bool
-    influence_conversation: true
-    mappings:
-    - type: custom
-  
-  long_duration:
-    type: bool
-    influence_conversation: true
+    values:
+      - chest_pain
+      - fever
+      - headache
     mappings:
     - type: custom
 
-  low_fever:
-    type: bool
+  period:
+    type: categorical
     influence_conversation: true
-    mappings:
-    - type: custom
-  
-  medium_fever:
-    type: bool
-    influence_conversation: true
+    values:
+      - short_period
+      - medium_period
+      - long_period
     mappings:
     - type: custom
 
-  high_fever:
-    type: bool
+  duration:
+    type: categorical
     influence_conversation: true
+    values:
+      - short_duration
+      - medium_duration
+      - long_duration
+    mappings:
+    - type: custom
+
+  fever_level:
+    type: categorical
+    influence_conversation: true
+    values:
+      - low_fever
+      - medium_fever
+      - high_fever
     mappings:
     - type: custom
 

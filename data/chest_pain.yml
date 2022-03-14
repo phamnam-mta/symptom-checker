@@ -39,7 +39,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - long_period: true
+    - period: long_period
   - action: utter_chest_pain_hospitalize_2
 
 - story: chest pain-5
@@ -56,7 +56,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - short_period: true
+    - period: short_period
   - action: action_chest_pain_risk_factor
 
 - story: chest pain-6
@@ -73,7 +73,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - medium_period: true
+    - period: medium_period
   - action: utter_chest_pain_at_night
   - intent: affirm
   - action: utter_chest_pain_hospitalize_3
@@ -92,7 +92,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - medium_period: true
+    - period: medium_period
   - action: utter_chest_pain_at_night
   - intent: deny
   - action: utter_chest_pain_duration
@@ -101,7 +101,7 @@ stories:
     - duration
   - action: action_extract_duration
   - slot_was_set:
-    - long_duration: true
+    - duration: long_duration
   - action: action_chest_pain_risk_factor
 
 - story: chest pain-8
@@ -118,7 +118,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - medium_period: true
+    - period: medium_period
   - action: utter_chest_pain_at_night
   - intent: deny
   - action: utter_chest_pain_duration
@@ -127,7 +127,7 @@ stories:
     - duration
   - action: action_extract_duration
   - slot_was_set:
-    - short_duration: true
+    - duration: short_duration
   - action: utter_chest_pain_related_symptom
   - intent: affirm
   - action: utter_chest_pain_virtual_care_5
@@ -146,7 +146,7 @@ stories:
     - period
   - action: action_extract_period
   - slot_was_set:
-    - medium_period: true
+    - period: medium_period
   - action: utter_chest_pain_at_night
   - intent: deny
   - action: utter_chest_pain_duration
@@ -155,7 +155,7 @@ stories:
     - duration
   - action: action_extract_duration
   - slot_was_set:
-    - short_duration: true
+    - duration: short_duration
   - action: utter_chest_pain_related_symptom
   - intent: deny
   - action: utter_chest_pain_self_treatment
