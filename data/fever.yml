@@ -1,7 +1,7 @@
 version: "3.0"
 
 stories:
-- story: fever-1
+- story: fever_adult-1
   steps:
   - checkpoint: fever
   - intent: inform
@@ -12,7 +12,7 @@ stories:
     - high_fever: true
   - action: utter_high_fever
 
-- story: fever-2
+- story: fever_adult-2
   steps:
   - checkpoint: fever
   - intent: inform
@@ -28,8 +28,7 @@ stories:
   - intent: affirm
   - action: utter_fever_headache_stiff_neck_out
 
-
-- story: fever-3
+- story: fever_adult-3
   steps:
   - checkpoint: fever
   - intent: inform
@@ -47,7 +46,7 @@ stories:
   - intent: affirm
   - action: utter_fever_skin_spot_out
 
-- story: fever-4
+- story: fever_adult-4
   steps:
   - checkpoint: fever
   - intent: inform
@@ -65,7 +64,7 @@ stories:
   - intent: affirm
   - action: utter_fever_skin_spot_out
 
-- story: fever-5
+- story: fever_adult-5
   steps:
   - checkpoint: fever
   - intent: inform
@@ -85,7 +84,7 @@ stories:
   - intent: affirm
   - action: utter_heart_beat_out
 
-- story: fever-6
+- story: fever_adult-6
   steps:
   - checkpoint: fever
   - intent: inform
@@ -107,7 +106,7 @@ stories:
   - intent: affirm
   - action: utter_fever_mental_change_out
 
-- story: fever-7
+- story: fever_adult-7
   steps:
   - checkpoint: fever
   - intent: inform
@@ -129,8 +128,7 @@ stories:
   - intent: affirm
   - action: utter_fever_mental_change_out
 
-
-- story: fever-8.1
+- story: fever_adult-8.1
   steps:
   - checkpoint: fever
   - intent: inform
@@ -156,7 +154,7 @@ stories:
   - intent: affirm
   - action: utter_fever_blood_pressure_out
 
-- story: fever-9.1
+- story: fever_adult-9.1
   steps:
   - checkpoint: fever
   - intent: inform
@@ -182,7 +180,7 @@ stories:
   - intent: affirm
   - action: utter_fever_relocation_out
 
-- story: fever-9.2
+- story: fever_adult-9.2
   steps:
   - checkpoint: fever
   - intent: inform
@@ -210,7 +208,7 @@ stories:
   - intent: affirm
   - action: utter_fever_relocation_out
 
-- story: fever-10.1
+- story: fever_adult-10.1
   steps:
   - checkpoint: fever
   - intent: inform
@@ -236,7 +234,7 @@ stories:
   - intent: deny
   - action: utter_fever_medication_out
 
-- story: fever-10.2
+- story: fever_adult-10.2
   steps:
   - checkpoint: fever
   - intent: inform
@@ -266,8 +264,7 @@ stories:
   - intent: affirm
   - action: utter_fever_medication_out
 
-
-- story: fever-11.1
+- story: fever_adult-11.1
   steps:
   - checkpoint: fever
   - intent: inform
@@ -293,7 +290,7 @@ stories:
   - intent: deny
   - action: utter_fever_end_out
 
-- story: fever-11.2
+- story: fever_adult-11.2
   steps:
   - checkpoint: fever
   - intent: inform

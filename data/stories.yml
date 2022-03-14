@@ -48,5 +48,9 @@ stories:
   - action: action_extract_symptom
   - slot_was_set:
     - fever: true
+  - action: action_fever_pre_age_router
+
+- story: fever - Not urgent age
+  steps: 
   - action: utter_fever_level
   - checkpoint: fever

@@ -13,6 +13,7 @@ entities:
   - period
   - duration
   - fever_level
+
 slots:
   gender:
     type: text
@@ -263,7 +264,7 @@ responses:
   - text: "Biểu hiện đau ngực của ông bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm, tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
     Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
 
-################################# CHEST PAIN ##################################
+################################# FEVER ##################################
   utter_fever_level:
   - text: Mức độ sốt của Ông/bà?
     buttons:
@@ -404,19 +405,29 @@ responses:
   tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến để được tư vấn kỹ hơn về tình trạng của bản thân. \n \n
   Nếu kéo dài 3-4 ngày hãy đi khám bất kể có triệu chứng gì"
 
-actions:
-  - action_extract_symptom
-  - action_extract_period
-  - action_chest_pain_risk_factor
-  - action_extract_duration
-  - action_extract_fever_level
+  utter_fever_children_urgent_out:
+  - text: "Trẻ em dưới 2 tháng tuổi nên được đưa đến cơ sở y tế để gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
   
+  utter_fever_elder_urgen_out:
+  - text: "Người cao tuổi đặc biệt có nguy cơ nhiễm khuẩn nặng. Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
+  Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa. \n \n
+  Các biện pháp hạ sốt ở người cao tuổi chỉ là mang tính chất tạm thời."
+
 forms:
   user_info_form:
     required_slots:
         - age
         - gender
 
+actions:
+  - action_extract_symptom
+  - action_extract_period
+  - action_chest_pain_risk_factor
+  - action_extract_duration
+  - action_extract_fever_level
+  - validate_user_info_form
+  - action_fever_pre_age_router
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -10,13 +10,13 @@ cd symptom-checker
 pip install -r requirements.txt
 ```
 
-Train model by command
+## Train model by command
 
 ```bash
 rasa train
 ```
 
-Start rasa and action server with UI-Webchat
+## Start rasa and action server with UI-Webchat
 
 ```bash
 rasa run -m models --enable-api --cors "*" --debug
@@ -25,8 +25,15 @@ rasa run actions
 Open file `index.html` on web browser to test Chatbot
 
 
-Start rasa locally
+## Start rasa locally
 ```bash
 rasa run actions
 rasa shell
+```
+
+## Deploy with ngrok
+```bash
+rasa run actions
+rasa run -m models --enable-api --cors "*" --debug
+ngrok http 5005
 ```
