@@ -6,10 +6,10 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - slot_was_set:
-    - high_fever: true
+    - fever_level: high_fever
   - action: utter_high_fever
 
 - story: fever_adult-2
@@ -17,13 +17,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever 
   - action: utter_fever_headache_stiff_neck
   - intent: affirm
   - action: utter_fever_headache_stiff_neck_out
@@ -33,13 +33,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -51,13 +51,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -69,13 +69,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -89,13 +89,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -111,13 +111,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -133,13 +133,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -159,13 +159,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever 
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -185,13 +185,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -213,13 +213,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever 
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -239,13 +239,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -269,13 +269,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot
@@ -295,13 +295,13 @@ stories:
   - checkpoint: fever
   - intent: inform
     entities:
-        - fever_level
+    - fever_level
   - action: action_extract_fever_level
   - or:
     - slot_was_set:
-        - low_fever: true
+      - fever_level: low_fever
     - slot_was_set:
-      - medium_fever: true  
+      - fever_level: medium_fever  
   - action: utter_fever_headache_stiff_neck
   - intent: deny
   - action: utter_fever_skin_spot

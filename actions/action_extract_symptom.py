@@ -18,7 +18,7 @@ class ActionExtractSymptom(Action):
         try:
             last_entities = list(tracker.get_latest_entity_values('symptom'))
             if last_entities:
-                return [SlotSet(last_entities[0], True)]
+                return [SlotSet("symptom", last_entities[0])]
 
             return []
         except Exception as ex:

@@ -25,7 +25,7 @@ stories:
       - symptom
   - action: action_extract_symptom
   - slot_was_set:
-    - chest_pain: true
+    - symptom: chest_pain
   - action: utter_suspected_heart_attack
   - checkpoint: chest_pain
 
