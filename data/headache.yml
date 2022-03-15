@@ -22,17 +22,15 @@ stories:
   - action: utter_headache_unusual
   - intent: deny
   - action: action_headache_risk_factor
+
+- story: headache-4.1
+  steps:
   - action: utter_headache_onset
   - intent: affirm
   - action: utter_headache_hospitalize_3
 
-- story: headache-4
+- story: headache-4.2
   steps:
-  - checkpoint: headache
-  - intent: deny
-  - action: utter_headache_unusual
-  - intent: deny
-  - action: action_headache_risk_factor
   - action: utter_headache_onset
   - intent: deny
   - action: utter_ask_headache_migraine
@@ -41,31 +39,12 @@ stories:
 
 - story: headache-5
   steps:
-  - checkpoint: headache
-  - intent: deny
-  - action: utter_headache_unusual
-  - intent: deny
-  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: affirm
   - action: utter_headache_virtual_care_1
 
 - story: headache-6
   steps:
-  - intent: deny
-  - action: action_headache_risk_factor
-  - action: utter_headache_onset
-  - intent: deny
-  - action: utter_ask_headache_migraine
-  - intent: deny
-  - action: utter_ask_headache_tension
-  - intent: affirm
-  - action: utter_headache_virtual_care_2
-
-- story: headache-7
-  steps:
-  - intent: deny
-  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: deny
   - action: utter_ask_headache_tension
