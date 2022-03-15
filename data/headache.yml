@@ -1,0 +1,93 @@
+version: "3.0"
+
+stories:
+- story: headache-1
+  steps:
+  - checkpoint: headache
+  - intent: affirm
+  - action: utter_headache_hospitalize_1
+
+- story: headache-2
+  steps:
+  - checkpoint: headache
+  - intent: deny
+  - action: utter_headache_unusual
+  - intent: affirm
+  - action: utter_headache_hospitalize_2
+
+- story: headache-3
+  steps:
+  - checkpoint: headache
+  - intent: deny
+  - action: utter_headache_unusual
+  - intent: deny
+  - action: action_headache_risk_factor
+  - action: utter_headache_onset
+  - intent: affirm
+  - action: utter_headache_hospitalize_3
+
+- story: headache-4
+  steps:
+  - checkpoint: headache
+  - intent: deny
+  - action: utter_headache_unusual
+  - intent: deny
+  - action: action_headache_risk_factor
+  - action: utter_headache_onset
+  - intent: deny
+  - action: utter_ask_headache_migraine
+  - intent: affirm
+  - action: utter_headache_virtual_care_1
+
+- story: headache-5
+  steps:
+  - checkpoint: headache
+  - intent: deny
+  - action: utter_headache_unusual
+  - intent: deny
+  - action: action_headache_risk_factor
+  - action: utter_ask_headache_migraine
+  - intent: affirm
+  - action: utter_headache_virtual_care_1
+
+- story: headache-6
+  steps:
+  - intent: deny
+  - action: action_headache_risk_factor
+  - action: utter_headache_onset
+  - intent: deny
+  - action: utter_ask_headache_migraine
+  - intent: deny
+  - action: utter_ask_headache_tension
+  - intent: affirm
+  - action: utter_headache_virtual_care_2
+
+- story: headache-7
+  steps:
+  - intent: deny
+  - action: action_headache_risk_factor
+  - action: utter_ask_headache_migraine
+  - intent: deny
+  - action: utter_ask_headache_tension
+  - intent: affirm
+  - action: utter_headache_virtual_care_2
+
+- story: headache-8
+  steps:
+  - action: utter_ask_headache_migraine
+  - intent: deny
+  - action: utter_ask_headache_tension
+  - intent: deny
+  - action: utter_ask_headache_cluster
+  - intent: affirm
+  - action: utter_headache_virtual_care_3
+
+- story: headache-9
+  steps:
+  - action: utter_ask_headache_migraine
+  - intent: deny
+  - action: utter_ask_headache_tension
+  - intent: deny
+  - action: utter_ask_headache_cluster
+  - intent: deny
+  - action: utter_headache_virtual_care_4
