@@ -413,12 +413,47 @@ responses:
   Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa. \n \n
   Các biện pháp hạ sốt ở người cao tuổi chỉ là mang tính chất tạm thời."
 
+  utter_fever_respiratory:
+  - text: "Bé có các dấu hiệu về hô hấp ví dụ: \n \n 
+    - Hắt xì \n \n
+    - Sổ mũi\n \n
+    - Ho \n \n
+    - Đau rát họng"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+  
+  utter_fever_respiratory_out:
+  - text: "Trẻ từ 3 tháng đến 3 tuổi không có dấu hiệu cảnh báo nên được bác sĩ khám nếu: \n \n
+    - sốt từ 39 ° C trở lên, \n \n
+    - không có nhiễm trùng đường hô hấp trên rõ ràng (tức là trẻ đang hắt hơi và chảy nước mũi và nghẹt mũi), \n \n
+    - sốt liên tục hơn 5 ngày \n \n
+    Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_fever_children_safecare:
+  - text: "Bé vẫn ăn và chơi bình thường, trong khoảng thời gian 2 ngày đầu bị Sốt"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /deny
+        title: Tôi không biết
+
+  utter_fever_children_safecare_out:
+  - text : "Có thể điều trị cho bé tại nhà bằng phương pháp vật lý như: Cho bé ở nơi thoáng mát, có thể trong nhiệt độ điều hoà từ 25 đến 28 độ, mặc quần áo thoáng, thấm mồ hôi, uống nhiều nước, lau người, hoặc tắm bằng nước ấm… \n \n
+  Dùng thuốc hạ sốt khi người bệnh sốt >= 39 độ C. Thuốc thường được sử dụng an toàn là Paracetamol liều 10 đến 15 mg/ kg/ lần, có thể dùng lần tiếp theo sau 4 đến 6 giờ."
+
 forms:
   user_info_form:
     required_slots:
         - age
         - gender
-
+      
 actions:
   - action_extract_symptom
   - action_extract_period
@@ -427,6 +462,7 @@ actions:
   - action_extract_fever_level
   - validate_user_info_form
   - action_fever_pre_age_router
+  - action_fever_post_age_router
   
 session_config:
   session_expiration_time: 60

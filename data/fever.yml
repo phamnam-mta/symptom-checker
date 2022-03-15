@@ -288,7 +288,7 @@ stories:
   - intent: deny
   - action: utter_fever_relocation
   - intent: deny
-  - action: utter_fever_end_out
+  - action: action_fever_post_age_router
 
 - story: fever_adult-11.2
   steps:
@@ -317,5 +317,27 @@ stories:
   - action: utter_fever_relocation
   - intent: deny
   - action: utter_fever_medication
+  - intent: deny
+  - action: action_fever_post_age_router
+
+- story: fever-children < 3 age - 1
+  steps:
+  - action: utter_fever_respiratory
+  - intent: affirm
+  - action: utter_fever_respiratory_out
+
+- story: fever-children < 3 age - 2
+  steps:
+  - action: utter_fever_respiratory
+  - intent: deny
+  - action: utter_fever_children_safecare
+  - intent: affirm
+  - action: utter_fever_children_safecare_out
+
+- story: fever-children < 3 age - 3
+  steps:
+  - action: utter_fever_respiratory
+  - intent: deny
+  - action: utter_fever_children_safecare
   - intent: deny
   - action: utter_fever_end_out
