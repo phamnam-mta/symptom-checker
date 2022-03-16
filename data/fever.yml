@@ -10,7 +10,7 @@ stories:
   - action: action_extract_fever_level
   - slot_was_set:
     - fever_level: high_fever
-  - action: utter_high_fever
+  - action: utter_high_fever_urgent_out
 
 - story: fever_adult-2
   steps:
@@ -26,7 +26,7 @@ stories:
       - fever_level: medium_fever 
   - action: utter_fever_headache_stiff_neck
   - intent: affirm
-  - action: utter_fever_headache_stiff_neck_out
+  - action: utter_fever_headache_stiffneck_urgent_out
 
 - story: fever_adult-3
   steps:
@@ -44,7 +44,7 @@ stories:
   - intent: deny
   - action: utter_fever_skin_spot
   - intent: affirm
-  - action: utter_fever_skin_spot_out
+  - action: utter_fever_skinspot_urgent_out
 
 - story: fever_adult-4
   steps:
@@ -62,7 +62,7 @@ stories:
   - intent: deny
   - action: utter_fever_skin_spot
   - intent: affirm
-  - action: utter_fever_skin_spot_out
+  - action: utter_fever_skinspot_urgent_out
 
 - story: fever_adult-5
   steps:
@@ -82,7 +82,7 @@ stories:
   - intent: deny
   - action: utter_heart_beat
   - intent: affirm
-  - action: utter_heart_beat_out
+  - action: utter_heartbeat_urgent_out
 
 - story: fever_adult-6
   steps:
@@ -104,7 +104,7 @@ stories:
   - intent: deny
   - action: utter_fever_mental_change
   - intent: affirm
-  - action: utter_fever_mental_change_out
+  - action: utter_fever_mentalchange_urgent_out
 
 - story: fever_adult-7
   steps:
@@ -126,7 +126,7 @@ stories:
   - intent: deny
   - action: utter_fever_mental_change
   - intent: affirm
-  - action: utter_fever_mental_change_out
+  - action: utter_fever_mentalchange_urgent_out
 
 - story: fever_adult-8.1
   steps:
@@ -152,7 +152,7 @@ stories:
   - intent: affirm
   - action: utter_fever_blood_pressure
   - intent: affirm
-  - action: utter_fever_blood_pressure_out
+  - action: utter_fever_bloodpressure_urgent_out
 
 - story: fever_adult-9.1
   steps:
@@ -178,7 +178,8 @@ stories:
   - intent: deny
   - action: utter_fever_relocation
   - intent: affirm
-  - action: utter_fever_relocation_out
+  - action: utter_fever_relocation_gp_out
+  - action: action_recommend_doctors
 
 - story: fever_adult-9.2
   steps:
@@ -206,7 +207,8 @@ stories:
   - intent: deny
   - action: utter_fever_relocation
   - intent: affirm
-  - action: utter_fever_relocation_out
+  - action: utter_fever_relocation_gp_out
+  - action: action_recommend_doctors
 
 - story: fever_adult-10.1
   steps:
@@ -232,7 +234,8 @@ stories:
   - intent: deny
   - action: utter_fever_relocation
   - intent: deny
-  - action: utter_fever_medication_out
+  - action: utter_fever_medication_gp_out
+  - action: action_recommend_doctors
 
 - story: fever_adult-10.2
   steps:
@@ -262,7 +265,8 @@ stories:
   - intent: deny
   - action: utter_fever_medication
   - intent: affirm
-  - action: utter_fever_medication_out
+  - action: utter_fever_medication_gp_out
+  - action: action_recommend_doctors
 
 - story: fever_adult-11.1
   steps:
@@ -324,7 +328,8 @@ stories:
   steps:
   - action: utter_fever_respiratory
   - intent: affirm
-  - action: utter_fever_respiratory_out
+  - action: utter_fever_respiratory_gp_out
+  - action: action_recommend_doctors
 
 - story: fever-children < 3 age - 2
   steps:
@@ -332,7 +337,8 @@ stories:
   - intent: deny
   - action: utter_fever_children_safecare
   - intent: affirm
-  - action: utter_fever_children_safecare_out
+  - action: utter_fever_children_selfcare_out
+  - action: action_recommend_doctors
 
 - story: fever-children < 3 age - 3
   steps:
@@ -340,4 +346,5 @@ stories:
   - intent: deny
   - action: utter_fever_children_safecare
   - intent: deny
-  - action: utter_fever_end_out
+  - action: utter_fever_end_virtualcare_out
+  - action: action_recommend_doctors

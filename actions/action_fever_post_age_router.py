@@ -21,7 +21,7 @@ class ActionFeverPostAgeRouter(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        ''' Check respiratory if age<=3, otherwise return utter_fever_end_out
+        ''' Check respiratory if age<=3, otherwise return utter_fever_end_virtualcare_out
         '''
         try:
             age = tracker.get_slot('age')
@@ -29,7 +29,7 @@ class ActionFeverPostAgeRouter(Action):
             if int(age) <= self.INFANT_AGE:
                 return [FollowupAction("utter_fever_respiratory")]
 
-            return [FollowupAction("utter_fever_end_out")]                
+            return [FollowupAction("utter_fever_end_virtualcare_out")]                
 
         except Exception as ex:
             logger.exception(ex)

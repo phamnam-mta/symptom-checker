@@ -37,3 +37,14 @@ rasa run actions
 rasa run -m models --enable-api --cors "*" --debug
 ngrok http 5005
 ```
+
+## Use recommend carousel
+Put the action behind the ending response. Example:
+```
+stories:
+- story:
+  steps:
+  - intent: affirm
+  - action: utter_high_fever_urgent_out
+  - action_recommend_doctors
+```

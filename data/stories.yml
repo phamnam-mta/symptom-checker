@@ -47,7 +47,7 @@ stories:
       - symptom
   - action: action_extract_symptom
   - slot_was_set:
-    - fever: true
+    - symptom: fever
   - action: action_fever_pre_age_router
 
 - story: fever - Not urgent age

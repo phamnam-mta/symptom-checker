@@ -1,0 +1,382 @@
+[
+    {
+        "doctor_id": "1",
+        "doctor_name": "Pham Hai Nam",
+        "department_id": "dept02",
+        "degree": "ThS BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "1",
+        "doctor_name": "Hai Nam",
+        "department_id": "dept02",
+        "degree": "TS CKII",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "1",
+        "doctor_name": "Pham Nam",
+        "department_id": "dept02",
+        "degree": "ThS BS CK1",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "2",
+        "doctor_name": "Tran Hoang Vu",
+        "department_id": "dept01",
+        "degree": "ThS CK1",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "3",
+        "doctor_name": "Lam Van Sang Em",
+        "department_id": "dept03",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "3",
+        "doctor_name": "Lam Van Sang",
+        "department_id": "dept03",
+        "degree": "TS BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "3",
+        "doctor_name": "Lam Van Sang Anh",
+        "department_id": "dept03",
+        "degree": "BS CKI",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "4",
+        "doctor_name": "Truong Chieu",
+        "department_id": "dept04",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "4",
+        "doctor_name": "Chieu Chieu",
+        "department_id": "dept04",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "4",
+        "doctor_name": "Truong Chieu 2",
+        "department_id": "dept04",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "5",
+        "doctor_name": "Hoa Da",
+        "department_id": "dept05",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F23%2F%25E6%25B1%2589%25E5%2590%258D%25E5%258C%25BB%25E5%258D%258E%25E4%25BD%2597.jpg&imgrefurl=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FHoa_%25C4%2590%25C3%25A0&tbnid=8Iw9uaGra_4GYM&vet=12ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ..i&docid=mTzARc3FAWWU2M&w=1166&h=1600&q=hoa%20da&ved=2ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "5",
+        "doctor_name": "Hoa Da Lat",
+        "department_id": "dept05",
+        "degree": "BS CKII",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F23%2F%25E6%25B1%2589%25E5%2590%258D%25E5%258C%25BB%25E5%258D%258E%25E4%25BD%2597.jpg&imgrefurl=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FHoa_%25C4%2590%25C3%25A0&tbnid=8Iw9uaGra_4GYM&vet=12ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ..i&docid=mTzARc3FAWWU2M&w=1166&h=1600&q=hoa%20da&ved=2ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "5",
+        "doctor_name": "Hoa Da Nang",
+        "department_id": "dept05",
+        "degree": "BS CKI",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F23%2F%25E6%25B1%2589%25E5%2590%258D%25E5%258C%25BB%25E5%258D%258E%25E4%25BD%2597.jpg&imgrefurl=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FHoa_%25C4%2590%25C3%25A0&tbnid=8Iw9uaGra_4GYM&vet=12ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ..i&docid=mTzARc3FAWWU2M&w=1166&h=1600&q=hoa%20da&ved=2ahUKEwiTsprE2sn2AhWMNLcAHRBDC4UQMygBegUIARDYAQ",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "6",
+        "doctor_name": "Tue Tinh",
+        "department_id": "dept06",
+        "degree": "BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "6",
+        "doctor_name": "Tue Tinh Tam",
+        "department_id": "dept06",
+        "degree": "Ths BS",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "6",
+        "doctor_name": "Tue Man",
+        "department_id": "dept06",
+        "degree": "BS CKI",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "7",
+        "doctor_name": "Vuong Thien Nhat",
+        "department_id": "dept07",
+        "degree": "BS CKII",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "7",
+        "doctor_name": "Vuong Thien Nhi",
+        "department_id": "dept07",
+        "degree": "BS CKII",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    },
+    {
+        "doctor_id": "7",
+        "doctor_name": "Trinh Duy Dong",
+        "department_id": "dept07",
+        "degree": "BS CKII",
+        "consultant_fee": "500k/1h",
+        "avatar": "https://image.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg",
+        "time_slots": [
+            {
+                "time": "8:00",
+                "date": "07/06/2021",
+                "fee": "300.000 VND"
+            },
+            {
+                "time": "16:00",
+                "date": "07/06/2021",
+                "fee": "100.000 VND"
+            }
+        ]
+    }
+]
