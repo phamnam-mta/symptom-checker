@@ -416,6 +416,111 @@ responses:
   - text : "Có thể điều trị cho bé tại nhà bằng phương pháp vật lý như: Cho bé ở nơi thoáng mát, có thể trong nhiệt độ điều hoà từ 25 đến 28 độ, mặc quần áo thoáng, thấm mồ hôi, uống nhiều nước, lau người, hoặc tắm bằng nước ấm… \n \n
   Dùng thuốc hạ sốt khi người bệnh sốt >= 39 độ C. Thuốc thường được sử dụng an toàn là Paracetamol liều 10 đến 15 mg/ kg/ lần, có thể dùng lần tiếp theo sau 4 đến 6 giờ."
 
+################################# HEADACHE ##################################
+
+  utter_headache_warning_signs:
+  - text: "Ông/bà có một trong những dấu hiệu sau đây không?  \n  \n
+          - Thay đổi cảm giác hoặc thị lực, mất phối hợp giữa các chi, co giật, khó nói, lú lẫn   \n  \n
+          - Sốt và cứng cổ khiến cho việc cử động cằm bị đau  \n  \n
+          - Đau đầu dữ dội, rất đột ngột  \n  \n
+          - Căng thái dương (như khi chải tóc) hoặc đau hàm khi nhai  \n  \n
+          - Đã được chẩn đoán ung thư hoặc AIDS  \n  \n
+          - Sử dụng thuốc ức chế hệ thống miễn dịch  \n  \n
+          - Các triệu chứng ảnh hưởng đến toàn bộ cơ thể như sốt hoặc sụt cân  \n  \n
+          - Đau đầu nặng dần lên (tần suất hoặc mức độ nghiêm trọng)  \n  \n
+          - Mắt đỏ và nhìn thấy quầng sáng xung quanh đèn  \n  \n
+          - Huyết áp rất cao"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_headache_hospitalize_1:
+  - text: "Ông/bà nên tới bệnh viện càng sớm càng tốt bởi vì sự hiện diện của một dấu hiệu cảnh báo này cho thấy rằng cơn đau đầu có thể do một chứng rối loạn nghiêm trọng gây ra, chẳng hạn như những trường hợp sau:  \n  \n
+          - Viêm màng não  \n  \n
+          - Chảy máu trong màng não  \n  \n
+          - Viêm động mạch tế bào khổng lồ  \n  \n
+          - Di căn ung thư lên não  \n  \n
+          - Bệnh tăng nhãn áp  \n  \n
+          Nên kịp thời gặp bác sĩ để có chẩn đoán chính xác và kịp thời khám chữa."
+
+  utter_headache_hospitalize_2:
+  - text: "Nhiều khả năng triệu chứng đau đầu của ông/bà thuộc nhóm đau đầu thứ phát. Nhóm đau đầu thứ phát thường có nguyên nhân do chấn thương sọ não, chấn thương vùng cổ gáy gây tụ máu não, tụ máu dưới màng cứng, hoặc do gãy xương cột sống hoặc trượt đốt sống cổ gây đè ép tủy. Ngoài ra còn có thể do sử dụng thuốc giảm đau hoặc các bệnh lý khác ít nghiêm trọng hơn.  \n  \n
+          Ông/bà nên tới bệnh viện để được chẩn đoán sớm và chữa trị kịp thời."
+
+  utter_headache_hospitalize_3:
+  - text: "Nhiều khả năng triệu chứng đau đầu của ông/bà thuộc nhóm đau đầu thứ phát. Nhóm đau đầu thứ phát thường có nguyên nhân do chấn thương sọ não, chấn thương vùng cổ gáy gây tụ máu não, tụ máu dưới màng cứng, hoặc do gãy xương cột sống hoặc trượt đốt sống cổ gây đè ép tủy. Ngoài ra còn có thể do sử dụng thuốc giảm đau hoặc các bệnh lý khác ít nghiêm trọng hơn.  \n  \n
+          Ông/bà nên tới bệnh viện để được chẩn đoán sớm và chữa trị kịp thời."
+
+  utter_headache_unusual:
+  - text: "Triệu chứng đau đầu của ông/bà có nặng hơn và khác hẳn so với những lần đau đầu trong quá khứ hay không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_headache_onset:
+  - text: "Triệu chứng đau đầu của ông/bà có khởi phát sau 50 tuổi không?  Nghĩa là trong quá khứ ông/bà không bị đau đầu tái đi tái lại hoặc có đau đầu nhưng không quá nghiêm trọng?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_ask_headache_migraine:
+  - text: "Cơn đau đầu của ông/bà có những biểu hiện sau đây không?  \n  \n
+          - Đau một bên của đầu, kéo dài 4-72 giờ  \n  \n
+          - Kèm theo các triệu chứng như: buồn nôn, sợ ánh sáng, sợ tiếng động, sợ mùi.  \n  \n
+          - Nặng lên khi hoạt động, thích nằm trong bóng tối, đỡ khi ngủ."
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_headache_virtual_care_1:
+  - text: "Biểu hiện đau đầu của ông/bà nhiều khả năng do bệnh lý đau nửa đầu gây ra. Tuy nhiên chúng tôi cũng không loại trừ các khả năng gây đau đầu do các bệnh lý khác.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_headache_virtual_care_2:
+  - text: "Biểu hiện đau đầu của ông/bà nhiều khả năng do bệnh lý đau đầu căng thẳng gây ra. Tuy nhiên chúng tôi cũng không loại trừ các khả năng gây đau đầu do các bệnh lý khác.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_headache_virtual_care_3:
+  - text: "Biểu hiện đau đầu của ông/bà nhiều khả năng do bệnh lý đau đầu chùm gây ra. Tuy nhiên chúng tôi cũng không loại trừ các khả năng gây đau đầu do các bệnh lý khác.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_headache_virtual_care_4:
+  - text: "Biểu hiện đau đầu của ông/bà nhiều khả năng do bệnh lý đau đầu thứ phát(do các bệnh lý khác) gây ra.  \n  \n
+          Ông/bà có thể đặt lịch tư vấn trực tuyến với các bác sĩ sau đây để được tư vấn kỹ hơn về tình trạng của bản thân.  \n  \n
+          Nếu ông/bà cảm thấy các triệu chứng của mình ngày càng nghiêm trọng hơn thì đừng chần chờ mà hãy tới bệnh viện ngay lập tức."
+
+  utter_ask_headache_tension:
+  - text: "Cơn đau đầu của ông/bà có một trong những biểu hiện sau đây không?  \n  \n
+          - Cảm giác đau thường xuyên hoặc liên tục, mức độ nhẹ, hai bên, và ở chẩm hoặc trán lan ra toàn bộ đầu  \n  \n
+          - Nặng hơn vào cuối ngày"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_ask_headache_cluster:
+  - text: "Cơn đau đầu của ông/bà có một trong những biểu hiện sau đây không?  \n  \n
+    - Cơn đau dữ dội nằm phía trong hoặc xung quanh của một bên mắt, cơn đau có thể lan tới các khu vực khác trên khuôn mặt, đầu và cổ.  \n  \n
+    - Đau sâu, nặng, kéo dài 30-180 phút  \n  \n
+    - Bị chảy nước mắt, đỏ mặt, hoặc hội chứng Horner; bồn chồn"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
 forms:
   user_info_form:
     required_slots:
@@ -432,6 +537,7 @@ actions:
   - action_fever_pre_age_router
   - action_fever_post_age_router
   - action_recommend_doctors
+  - action_headache_risk_factor
   
 session_config:
   session_expiration_time: 60
