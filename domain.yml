@@ -243,7 +243,7 @@ responses:
       - payload: '/inform{{"fever_level":"high_fever"}}'
         title: Hơn 40°C
 
-  utter_high_fever: 
+  utter_high_fever_urgent_out: 
   - text: "Nhiệt độ sốt > 40 độ C hoặc < 35 độ C là một trong các dấu hiệu cảnh báo của Sốt. \n \n
   Xin hãy đến cơ sở y tế để gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
 
@@ -259,7 +259,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
 
-  utter_fever_headache_stiff_neck_out:
+  utter_fever_headache_stiffneck_urgent_out:
   - text: "Nếu Ông/bà nghĩ rằng mình đang bị nhức đầu, cổ cứng hãy đến cơ sở y tế gần nhất trong 24-48 giờ , ngay cả khi Ông/bà không chắc chắn về điều này.\n \n
   Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
   Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng là viêm màng não."
@@ -274,7 +274,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
 
-  utter_fever_skin_spot_out:
+  utter_fever_skinspot_urgent_out:
   - text: "Nếu Ông/bà nghĩ rằng mình đang nổi đốm đỏ, ban hoặc xuất huyết ở da hãy đến cơ sở y tế gần nhất trong 24-48 giờ , ngay cả khi Ông/bà không chắc chắn về điều này. \n \n
   Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
   Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng là viêm màng não."
@@ -292,7 +292,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
 
-  utter_heart_beat_out:
+  utter_heartbeat_urgent_out:
   - text: "Nếu Ông/bà nghĩ rằng mình đang bị nhịp tim nhanh,thở nhanh,khó thở hãy đến cơ sở y tế gần nhất trong 24-48 giờ. \n \n
   Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
   Các dấu hiệu cảnh báo trên gợi ý chứng rối loạn nghiêm trọng về nhiễm khuẩn huyết."
@@ -310,7 +310,7 @@ responses:
         title: Không
       - payload: /deny
         title: Tôi không biết
-  utter_fever_mental_change_out:
+  utter_fever_mentalchange_urgent_out:
   - text: "Nếu Ông/bà nghĩ rằng tình trạm tâm thần đang xấu đi hãy đến cơ sở y tế gần nhất trong 24-48 giờ.
   Đừng chờ đợi để xem các triệu chứng có giảm đi không.
   Các dấu hiệu cảnh báo trên gợi ý tổn thương thần kinh khi bị Sốt."
@@ -333,7 +333,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
   
-  utter_fever_blood_pressure_out:
+  utter_fever_bloodpressure_urgent_out:
   - text: "Huyết áp thấp có nhiều rủi ro cho sức khỏe, có khi còn đe dọa tới tính mạng. \n \n
   Xin hãy đến cơ sở y tế gần nhất trong 24-48 giờ. \n \n
   Đây là một trong các dấu hiệu cảnh báo nghiệm trọng của Sốt"
@@ -348,7 +348,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
     
-  utter_fever_relocation_out:
+  utter_fever_relocation_gp_out:
   - text: "Di chuyển đến một số khu vực có dịch bệnh nghiêm trọng là một trong các dấu hiệu cảnh bảo của Sốt, xin hãy cơ sở y tế gần nhất trong 24-48 giờ.\n \n
   Chúng tôi không loại trừ việc bị: sốt rét, covid nên được nghi ngờ. \n \n
   Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
@@ -364,11 +364,11 @@ responses:
       - payload: /deny
         title: Tôi không biết
 
-  utter_fever_medication_out:
+  utter_fever_medication_gp_out:
   - text: "Chúng tôi không loại trừ ông/bà có thể bị suy giảm miễn dịch do rối loạn hay sử dụng thuốc ức chế miễn dịch. \n \n
   Đây là một trong các dấu hiệu cảnh bảo của Sốt, Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
 
-  utter_fever_end_out:
+  utter_fever_end_virtualcare_out:
   - text: "Biểu hiện Sốt của Ông/bà có khả năng không phải có nguồn gốc từ bệnh lý nguy hiểm, \n \n 
   tuy nhiên để chắc chắn hơn ông/bà nên đặt lịch tư vấn trực tuyến để được tư vấn kỹ hơn về tình trạng của bản thân. \n \n
   Nếu kéo dài 3-4 ngày hãy đi khám bất kể có triệu chứng gì"
@@ -376,7 +376,7 @@ responses:
   utter_fever_children_urgent_out:
   - text: "Trẻ em dưới 2 tháng tuổi nên được đưa đến cơ sở y tế để gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa."
   
-  utter_fever_elder_urgen_out:
+  utter_fever_elder_urgent_out:
   - text: "Người cao tuổi đặc biệt có nguy cơ nhiễm khuẩn nặng. Đừng chờ đợi để xem các triệu chứng có giảm đi không. \n \n
   Ông/bà nên tới bệnh viện gặp bác sĩ sớm nhất có thể để có chẩn đoán chính xác và kịp thời khám chữa. \n \n
   Các biện pháp hạ sốt ở người cao tuổi chỉ là mang tính chất tạm thời."
@@ -395,7 +395,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
   
-  utter_fever_respiratory_out:
+  utter_fever_respiratory_gp_out:
   - text: "Trẻ từ 3 tháng đến 3 tuổi không có dấu hiệu cảnh báo nên được bác sĩ khám nếu: \n \n
     - sốt từ 39 ° C trở lên, \n \n
     - không có nhiễm trùng đường hô hấp trên rõ ràng (tức là trẻ đang hắt hơi và chảy nước mũi và nghẹt mũi), \n \n
@@ -412,7 +412,7 @@ responses:
       - payload: /deny
         title: Tôi không biết
 
-  utter_fever_children_safecare_out:
+  utter_fever_children_selfcare_out:
   - text : "Có thể điều trị cho bé tại nhà bằng phương pháp vật lý như: Cho bé ở nơi thoáng mát, có thể trong nhiệt độ điều hoà từ 25 đến 28 độ, mặc quần áo thoáng, thấm mồ hôi, uống nhiều nước, lau người, hoặc tắm bằng nước ấm… \n \n
   Dùng thuốc hạ sốt khi người bệnh sốt >= 39 độ C. Thuốc thường được sử dụng an toàn là Paracetamol liều 10 đến 15 mg/ kg/ lần, có thể dùng lần tiếp theo sau 4 đến 6 giờ."
 
@@ -536,6 +536,7 @@ actions:
   - validate_user_info_form
   - action_fever_pre_age_router
   - action_fever_post_age_router
+  - action_recommend_doctors
   - action_headache_risk_factor
   - action_vignette_summary
   

@@ -32,11 +32,11 @@ class ActionFeverAgeRouter(Action):
             
             if int(age) <= self.URGENT_INFANT_AGE:
                 dispatcher.utter_message(template="utter_fever_children_urgent_out")
-                return [Restarted()]
+                return [FollowupAction("action_recommend_doctors"),Restarted()]
 
             if int(age) >= self.URGENT_OLD_AGE:
-                dispatcher.utter_message(template="utter_fever_elder_urgen_out")
-                return [Restarted()]
+                dispatcher.utter_message(template="utter_fever_elder_urgent_out")
+                return [FollowupAction("action_recommend_doctors"),Restarted()]
 
             return [FollowupAction("utter_fever_level")]
 
