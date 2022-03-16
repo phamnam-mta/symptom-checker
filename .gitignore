@@ -6,6 +6,7 @@
 /.idea/
 
 # Rasa 
+/report/
 /models/
 /logs/
 /auth/

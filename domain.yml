@@ -537,6 +537,7 @@ actions:
   - action_fever_pre_age_router
   - action_fever_post_age_router
   - action_headache_risk_factor
+  - action_vignette_summary
   
 session_config:
   session_expiration_time: 60
