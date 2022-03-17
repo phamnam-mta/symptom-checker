@@ -45,7 +45,13 @@ FEVER_DEPT = {
 
 # headache
 HEADACHE_DEPT = {
-
+    "utter_headache_hospitalize_1": ['dept07'],
+    "utter_headache_hospitalize_2": ['dept07'],
+    "utter_headache_hospitalize_3": ['dept07'],
+    "utter_headache_virtual_care_1": ['dept07'],
+    "utter_headache_virtual_care_2": ['dept07'],
+    "utter_headache_virtual_care_3": ['dept07'],
+    "utter_headache_virtual_care_4": ['dept07']
 }
 
 SYMPTOM_TO_DEPT = {

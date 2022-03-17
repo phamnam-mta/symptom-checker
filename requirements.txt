@@ -5,3 +5,4 @@ sanic-jwt==1.7.0
 sanic-plugin-toolkit==1.2.1
 Sanic-Plugins-Framework==0.9.5
 sanic-routing==0.7.0
+fpdf==1.7.2

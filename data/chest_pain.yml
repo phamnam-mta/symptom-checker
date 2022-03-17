@@ -6,6 +6,7 @@ stories:
   - checkpoint: chest_pain
   - intent: affirm
   - action: utter_warning_heart_attack
+  - action: action_recommend_doctors
 
 - story: chest pain-2
   steps:
@@ -14,6 +15,7 @@ stories:
   - action: utter_chest_pain_warning_signs
   - intent: affirm
   - action: utter_chest_pain_emergency
+  - action: action_recommend_doctors
 
 - story: chest pain-3
   steps:
@@ -24,6 +26,7 @@ stories:
   - action: utter_chest_pain_progression
   - intent: affirm
   - action: utter_chest_pain_hospitalize_1
+  - action: action_recommend_doctors
 
 - story: chest pain-4
   steps:
@@ -41,6 +44,7 @@ stories:
   - slot_was_set:
     - period: long_period
   - action: utter_chest_pain_hospitalize_2
+  - action: action_recommend_doctors
 
 - story: chest pain-5
   steps:
@@ -58,6 +62,7 @@ stories:
   - slot_was_set:
     - period: short_period
   - action: action_chest_pain_risk_factor
+  - action: action_recommend_doctors
 
 - story: chest pain-6
   steps:
@@ -77,6 +82,7 @@ stories:
   - action: utter_chest_pain_at_night
   - intent: affirm
   - action: utter_chest_pain_hospitalize_3
+  - action: action_recommend_doctors
 
 - story: chest pain-7
   steps:
@@ -103,6 +109,7 @@ stories:
   - slot_was_set:
     - duration: long_duration
   - action: action_chest_pain_risk_factor
+  - action: action_recommend_doctors
 
 - story: chest pain-8
   steps:
@@ -131,6 +138,7 @@ stories:
   - action: utter_chest_pain_related_symptom
   - intent: affirm
   - action: utter_chest_pain_virtual_care_5
+  - action: action_recommend_doctors
 
 - story: chest pain-9
   steps:
@@ -159,3 +167,4 @@ stories:
   - action: utter_chest_pain_related_symptom
   - intent: deny
   - action: utter_chest_pain_self_treatment
+  - action: action_recommend_doctors
