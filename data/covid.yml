@@ -1,0 +1,138 @@
+version: "3.0"
+
+stories:
+- story: check covid-5.4
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: deny
+  - action: utter_covid_ask_cough
+  - intent: deny
+  - action: utter_covid_ask_common_symptom
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+- story: check covid-5.4
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: deny
+  - action: utter_covid_ask_cough
+  - intent: deny
+  - action: utter_covid_ask_common_symptom
+  - intent: deny
+  - action: utter_covid_low_risk
+
+
+- story: check covid-5.3
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: deny
+  - action: utter_covid_ask_cough
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+
+
+- story: check covid-5.2
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: affirm
+  - action: utter_covid_ask_weaken_immune
+  - intent: deny
+  - action: utter_covid_ask_fever_period
+  - intent: deny
+  - action: utter_covid_low_risk
+  
+
+- story: check covid-5.1
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: affirm
+  - action: utter_covid_ask_weaken_immune
+  - intent: deny
+  - action: utter_covid_ask_fever_period
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+
+- story: check covid-5
+  steps:
+  - checkpoint: end_step_4
+  - action: utter_covid_ask_fever
+  - intent: affirm
+  - action: utter_covid_ask_weaken_immune
+  - intent: affirm
+  - action: utter_covid_emergency
+
+
+
+- story: check covid-4
+  steps:
+  - checkpoint: end_step_3
+  - action: utter_covid_ask_vomiting
+  - intent: affirm
+  - checkpoint: end_step_4
+
+- story: check covid-4
+  steps:
+  - checkpoint: end_step_3
+  - action: utter_covid_ask_vomiting
+  - intent: deny
+  - checkpoint: end_step_4
+
+- story: check covid-3.3
+  steps:
+  - checkpoint: end_step_2
+  - action: utter_covid_ask_chest_pain
+  - intent: deny
+  - action: utter_covid_ask_trouble_breath
+  - intent: deny
+  - action: utter_covid_ask_dizzy
+  - intent: deny
+  - checkpoint: end_step_3
+
+- story: check covid-3.2
+  steps:
+  - checkpoint: end_step_2
+  - action: utter_covid_ask_chest_pain
+  - intent: deny
+  - action: utter_covid_ask_trouble_breath
+  - intent: deny
+  - action: utter_covid_ask_dizzy
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+- story: check covid-3.1
+  steps:
+  - checkpoint: end_step_2
+  - action: utter_covid_ask_chest_pain
+  - intent: deny
+  - action: utter_covid_ask_trouble_breath
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+
+- story: check covid-3
+  steps:
+  - checkpoint: end_step_2
+  - action: utter_covid_ask_chest_pain
+  - intent: affirm
+  - action: utter_covid_high_risk
+
+- story: check covid-2.1
+  steps:
+  - checkpoint: covid
+  - intent: deny
+  - checkpoint: end_step_2
+
+
+- story: check covid-2
+  steps:
+  - checkpoint: covid
+  - intent: affirm
+  - checkpoint: end_step_2
+

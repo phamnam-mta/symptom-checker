@@ -39,6 +39,7 @@ slots:
       - chest_pain
       - fever
       - headache
+      - covid
     mappings:
     - type: custom
 
@@ -109,6 +110,8 @@ responses:
         title: Sốt
       - payload: '/inform{{"symptom":"headache"}}'
         title: Đau đầu
+      - payload: /inform{{"symptom":"covid"}}
+        title: Kiểm tra triệu chứng COVID-19
 
 
 ################################# CHEST PAIN ##################################
@@ -520,6 +523,127 @@ responses:
         title: Có
       - payload: /deny
         title: Không
+
+################################# COVID ######################################
+  utter_covid_ask_sick:
+  - text: "Ông/bà đang có chắc chắn mình đang bị bệnh không? Hoặc bạn có đang cảm nhận được các triệu chứng như cảm lạnh hoặc cúm không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_covid_ask_chest_pain:
+  - text: "Khi ấn vào ngực ông/bà có cảm thấy đau hoặc khó chịu hơn mức bình thường không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+  
+  utter_covid_ask_trouble_breath:
+  - text: "Ông/bà có cảm thấy khó thở hơn mức bình thường không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+  
+  utter_covid_ask_dizzy:
+  - text: "Ông/bà có thường hay chóng mặt hoặc ngất xỉu trong thời gian gần đây không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_covid_ask_vomiting:
+  - text: "Ông/bà có buồn nôn/nôn mữa/tiêu chảy trong thời gian gần đây không?"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+  
+  utter_covid_ask_fever:
+  - text: Ông/bà đang bị sốt trên 37.8 độ C không?
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+      - payload: /affirm
+        title: Tôi không biết
+
+  utter_covid_ask_fever_period:
+  - text: Ông/bà bị sốt bao nhiêu ngày rồi?
+    buttons:
+      - payload: /affirm
+        title: Nhiều hơn 3 ngày
+      - payload: /deny
+        title: Ít hơn 3 ngày
+  
+  utter_covid_ask_cough:
+  - text: Ông/bà đang bị ho và mức độ ho dần chuyển nặng hơn không?
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_covid_ask_serious_symptom:
+  - text: "Ông/bà có bất kỳ triệu chứng đe dọa đến tính mạng nào dưới đây không?  \n
+            - Khó thở  \n
+            - Đau hoặc tức ngực dai dẳng  \n
+            - Tình trạng lẫn lộn mới xuất hiện  \n
+            - Không có khả năng tỉnh hoặc thức dậy  \n
+            - Da, môi hoặc móng tay màu nhợt nhạt, xám hoặc xanh, tùy thuộc vào tông màu da  \n
+            - Chóng mặt, ngất xỉu  \n
+          *Danh sách này không phải là tất cả các triệu chứng có thể xảy ra. Vui lòng gọi cho phòng khám nếu có bất kỳ triệu chứng khác nghiêm trọng hoặc khiến bạn lo lắng."
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+  
+  utter_covid_ask_weaken_immune:
+  - text: "Ông/bà có bất kỳ tình trạng nào sau đây không làm suy yếu hệ thống miễn dịch không?  \n
+            - Bệnh ung thư, không bao gồm bệnh ung thư đã được điều trị trước đó thuyên giảm  \n
+            - Cấy ghép nội tạng hoặc cấy ghép tủy xương  \n
+            - Rối loạn tự miễn dịch (chẳng hạn như viêm khớp dạng thấp hoặc lupus)  \n
+            - Sử dụng các loại thuốc làm suy yếu hệ thống miễn dịch của ông/bà (chẳng hạn như steroid)  \n
+            - Bất kỳ tình trạng nào khác ảnh hưởng đến hệ thống miễn dịch của ông/bà, chẳng hạn như HIV"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+
+  utter_covid_ask_common_symptom:
+  - text: "Ông/bà đã có một hoặc nhiều các triệu chứng sau:  \n
+            • Lắc liên tục kèm theo ớn lạnh  \n
+            • Mất vị giác hoặc mùi mới  \n
+            • Viêm họng  \n
+            • Chảy nước mũi hoặc nghẹt mũi  \n
+            • Đau nhức cơ, nhức mỏi cơ thể, hay đau đầu  \n
+            • Mệt mỏi hoặc khó chịu  \n
+            • Buồn nôn, nôn mửa hoặc tiêu chảy  \n
+            • Phát ban"
+    buttons:
+      - payload: /affirm
+        title: Có
+      - payload: /deny
+        title: Không
+  
+  utter_covid_emergency:
+  - text: "**Dựa trên các triệu chứng của ông/bà cung cấp, ông/bà có thể cần được chăm sóc y tế khẩn cấp. **Vui lòng gọi 115 hoặc đến phòng cấp cứu gần nhất."
+
+  utter_covid_low_risk:
+  - text: "**Ông/bà có khả năng bị Covid thấp và thể tự theo dõi các tình trạng của bản thân.  \n  \n Nếu có ông/bà cảm thấy có bất kỳ triệu chứng nào nặng hơn **Vui lòng gọi 115 hoặc đến phòng cấp cứu gần nhất."
+
+  utter_covid_high_risk:
+  - text: "**Ông/bà có khả năng đã bị nhiễm Covid** Ông/bà nên thực hiện test Covid để có kết quả chính xác hơn.  \n  \n Nếu có ông/bà cảm thấy có bất kỳ triệu chứng nào nặng hơn **Vui lòng gọi 115 hoặc đến phòng cấp cứu gần nhất."
+
 
 forms:
   user_info_form:
