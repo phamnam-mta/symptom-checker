@@ -75,8 +75,8 @@ CAROUSEL_ELEMENT = {
     "buttons": [
         {
             "title": "Đặt lịch", 
-            "type": "degree",
-            "payload": "/greet"
+            "type": "postback",
+            "payload": "/book_appt"
         }
     ]
 }

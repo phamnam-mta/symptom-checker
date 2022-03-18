@@ -5,3 +5,8 @@ rules:
     steps:
     - intent: greet
     - action: utter_greet
+
+  - rule: book_appt
+    steps:
+    - intent: book_appt
+    - action: action_book_appt
