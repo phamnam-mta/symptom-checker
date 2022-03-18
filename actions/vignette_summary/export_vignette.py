@@ -1,4 +1,4 @@
-import os.path
+import os
 from fpdf import FPDF, HTMLMixin
 from typing import Any, Text, Dict, List
 
@@ -10,8 +10,7 @@ class MyFPDF(FPDF, HTMLMixin): pass
 def generate_report(user_info: Dict, 
                     chief_complain: Text,
                     qa_pairs: List, 
-                    suggestions: Text, 
-                    specialist: Text):
+                    suggestions: Text):
     pdf=MyFPDF()
     # load the unicode font
     pdf.add_font('DejaVu', '', FONT_PATH, uni=True)
@@ -30,10 +29,11 @@ def generate_report(user_info: Dict,
     questionnaire=questionnaire, 
     suggestions=suggestions))
 
+    if not os.path.exists(REPORT_PATH):
+        os.makedirs(REPORT_PATH)
     fn = os.path.join(REPORT_PATH, f'{name}.pdf')
     pdf.output(fn,'F')
         
-    import os
     try:
         os.startfile(fn)
     except:

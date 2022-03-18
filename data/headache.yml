@@ -6,7 +6,6 @@ stories:
   - checkpoint: headache
   - intent: affirm
   - action: utter_headache_hospitalize_1
-  - action: action_recommend_doctors
 
 - story: headache-2
   steps:
@@ -15,7 +14,6 @@ stories:
   - action: utter_headache_unusual
   - intent: affirm
   - action: utter_headache_hospitalize_2
-  - action: action_recommend_doctors
 
 - story: headache-3
   steps:
@@ -27,6 +25,8 @@ stories:
 
 - story: headache-4.1
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_headache_onset
   - intent: affirm
   - action: utter_headache_hospitalize_3
@@ -34,6 +34,8 @@ stories:
 
 - story: headache-4.2
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_headache_onset
   - intent: deny
   - action: utter_ask_headache_migraine
@@ -43,6 +45,8 @@ stories:
 
 - story: headache-5
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: affirm
   - action: utter_headache_virtual_care_1
@@ -50,6 +54,8 @@ stories:
 
 - story: headache-6
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: deny
   - action: utter_ask_headache_tension
@@ -59,6 +65,8 @@ stories:
 
 - story: headache-8
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: deny
   - action: utter_ask_headache_tension
@@ -70,6 +78,8 @@ stories:
 
 - story: headache-9
   steps:
+  - intent: deny
+  - action: action_headache_risk_factor
   - action: utter_ask_headache_migraine
   - intent: deny
   - action: utter_ask_headache_tension

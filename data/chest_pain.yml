@@ -6,7 +6,6 @@ stories:
   - checkpoint: chest_pain
   - intent: affirm
   - action: utter_warning_heart_attack
-  - action: action_recommend_doctors
 
 - story: chest pain-2
   steps:
@@ -15,7 +14,6 @@ stories:
   - action: utter_chest_pain_warning_signs
   - intent: affirm
   - action: utter_chest_pain_emergency
-  - action: action_recommend_doctors
 
 - story: chest pain-3
   steps:
