@@ -645,6 +645,9 @@ responses:
   utter_covid_high_risk:
   - text: "**Ông/bà có khả năng đã bị nhiễm Covid** Ông/bà nên thực hiện test Covid để có kết quả chính xác hơn.  \n  \n Nếu có ông/bà cảm thấy có bất kỳ triệu chứng nào nặng hơn **Vui lòng gọi 115 hoặc đến phòng cấp cứu gần nhất."
 
+  
+  utter_book_appt_successful:
+  - text: "Ông/bà đã đặt lịch hẹn với bác sĩ Hoàng Vũ thành công. Bác sĩ liên hệ lại với ông/bà trong ít phút.  \n  \nCảm ơn ông/bà đã tin tưởng và sử dụng dịch vụ!"
 
 forms:
   user_info_form:
