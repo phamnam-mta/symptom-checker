@@ -12,7 +12,9 @@ from actions.utils.rasa_util import (
 from actions.rs.recommender import Recommender
 from actions.rs.constants import (
     CAROUSEL,
-    CAROUSEL_ELEMENT
+    CAROUSEL_ELEMENT,
+    DEPARTMENT_ID,
+    END_MSG
 )
 
 logger = logging.getLogger(__name__)
@@ -44,6 +46,9 @@ class ActionRecommendDoctors(Action):
             
             msg = self.generate_carousel(doctors)
 
+            # display message
+            dispatcher.utter_message(text=END_MSG)
+
             # display carousel
             dispatcher.utter_message(attachment=msg)
 
@@ -60,7 +65,7 @@ class ActionRecommendDoctors(Action):
        for doctor in doctors:
            e = CAROUSEL_ELEMENT
            e['title'] = doctor['doctor_name']
-           e['subtitle'] = doctor['degree']
+           e['subtitle'] = doctor['degree'] + '- Khoa ' + str(DEPARTMENT_ID[doctor['department_id']])
            e['image_url'] = doctor['avatar']
            
            carousel['payload']['elements'].append(e) 

@@ -65,9 +65,11 @@ nlu:
     - được đấy
     - hợp lý
     - vâng
-
+    - có
+    
 - intent: deny
   examples: |
+    - không có
     - sai bét
     - sai sai
     - kô

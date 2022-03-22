@@ -23,24 +23,44 @@ CHEST_PAIN_DEPT = {
     'utter_chest_pain_hospitalize_3':['dept02','dept01'],
     'action_chest_pain_risk_factor':['dept02','dept01'],
     'utter_chest_pain_virtual_care_5':['dept02','dept01'],
-    'utter_chest_pain_self_treatment':['dept02','dept01']
+    'utter_chest_pain_self_treatment':['dept02','dept01'],
+    'utter_suspected_heart_attack': ['dept02','dept01'],
+    'utter_chest_pain_warning_signs':['dept02','dept01'],
+    'utter_chest_pain_progression':['dept02','dept01'],
+    'utter_chest_pain_period':['dept02','dept01'],
+    'utter_chest_pain_at_night':['dept02','dept01'],
+    'utter_chest_pain_duration':['dept02','dept01'],
+    'utter_chest_pain_related_symptom':['dept02','dept01']
 }
 
 # fever
 FEVER_DEPT = {
     'utter_fever_elder_urgent_out':['dept03','dept01','dept02'],
+    'utter_fever_elder':['dept03','dept01','dept02'],
     'utter_fever_children_urgent_out':['dept04','dept03'],
+    'utter_fever_children':['dept04','dept03'],
     'utter_high_fever_urgent_out':['dept03'],
+    'utter_high_fever':['dept03'],
     'utter_fever_headache_stiffneck_urgent_out':['dept03','dept01'],
+    'utter_fever_headache_stiffneck':['dept03','dept01'],
     'utter_fever_skinspot_urgent_out':['dept01'],
+    'utter_fever_skinspot':['dept01'],
     'utter_heartbeat_urgent_out':['dept02','dept03'],
+    'utter_heartbeat':['dept02','dept03'],
     'utter_fever_mentalchange_urgent_out':['dept07','dept03'],
+    'utter_fever_mentalchange':['dept07','dept03'],
     'utter_fever_bloodpressure_urgent_out':['dept02','dept03'],
+    'utter_fever_bloodpressure':['dept02','dept03'],
     'utter_fever_relocation_gp_out':['dept06','dept03','dept01'],
+    'utter_fever_relocation':['dept06','dept03','dept01'],
     'utter_fever_medication_gp_out':['dept03'],
+    'utter_fever_medication':['dept03'],
     'utter_fever_respiratory_gp_out':['dept01'],
+    'utter_fever_respiratory':['dept01'],
     'utter_fever_end_virtualcare_out':['dept03'],
-    'utter_fever_children_selfcare_out':['dept04']
+    'utter_fever_end':['dept03'],
+    'utter_fever_children_selfcare_out':['dept04'],
+    'utter_fever_children':['dept04']
 }
 
 # headache
@@ -51,7 +71,13 @@ HEADACHE_DEPT = {
     "utter_headache_virtual_care_1": ['dept07'],
     "utter_headache_virtual_care_2": ['dept07'],
     "utter_headache_virtual_care_3": ['dept07'],
-    "utter_headache_virtual_care_4": ['dept07']
+    "utter_headache_virtual_care_4": ['dept07'],
+    'utter_headache_warning_signs':['dept07'],
+    'utter_headache_unusual':['dept07'],
+    'utter_headache_onset':['dept07'],
+    'utter_ask_headache_migraine':['dept07'],
+    'utter_ask_headache_tension':['dept07'],
+    'utter_ask_headache_cluster':['dept07']
 }
 
 SYMPTOM_TO_DEPT = {
@@ -80,3 +106,5 @@ CAROUSEL_ELEMENT = {
         }
     ]
 }
+
+END_MSG = 'Dựa trên các thông tin Ông/Bà cung cấp, chúng tôi xin gợi ý các bác sĩ phù hơp nhất.'

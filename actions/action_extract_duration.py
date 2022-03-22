@@ -18,7 +18,7 @@ class ActionExtractDuration(Action):
         try:
             last_entities = list(tracker.get_latest_entity_values('duration'))
             if last_entities:
-                return ["duration", SlotSet(last_entities[0])]
+                return [SlotSet(last_entities[0])]
 
             return []
         except Exception as ex:

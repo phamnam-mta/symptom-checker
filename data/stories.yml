@@ -27,7 +27,8 @@ stories:
   - slot_was_set:
     - symptom: chest_pain
   - action: utter_suspected_heart_attack
-  - checkpoint: chest_pain
+  - checkpoint: chest_pain_oneflow
+  # - checkpoint: chest_pain
 
 
   ################################ FEVER #######################################
@@ -48,12 +49,8 @@ stories:
   - action: action_extract_symptom
   - slot_was_set:
     - symptom: fever
-  - action: action_fever_pre_age_router
-
-- story: fever - Not urgent age
-  steps: 
   - action: utter_fever_level
-  - checkpoint: fever
+  - checkpoint: fever_oneflow
 
 ################################ HEADACHE #######################################
 
@@ -74,7 +71,8 @@ stories:
   - slot_was_set:
     - symptom: headache
   - action: utter_headache_warning_signs
-  - checkpoint: headache
+  - checkpoint: headache_oneflow
+  # - checkpoint: headache
 
 ################################ COVID #######################################
 - story: flow - covid
@@ -95,3 +93,29 @@ stories:
     - symptom: covid
   - action: utter_covid_ask_sick
   - checkpoint: covid
+
+
+#  ################################ FEVER #######################################
+
+# - story: General flow - fever
+# steps:
+# - intent: greet
+# - action: utter_greet
+# - intent: affirm
+# - action: utter_introduction
+# - action: user_info_form
+# - active_loop: user_info_form
+# - active_loop: null
+# - action: utter_ask_chief_complaint
+# - intent: inform
+#   entities:
+#     - symptom
+# - action: action_extract_symptom
+# - slot_was_set:
+#   - symptom: fever
+# - action: action_fever_pre_age_router
+
+# - story: fever - Not urgent age
+# steps: 
+# - action: utter_fever_level
+# - checkpoint: fever_oneflow
