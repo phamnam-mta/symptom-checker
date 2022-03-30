@@ -647,7 +647,7 @@ responses:
 
   
   utter_book_appt_successful:
-  - text: "Ông/bà đã đặt lịch hẹn với bác sĩ Hoàng Vũ thành công. Bác sĩ liên hệ lại với ông/bà trong ít phút.  \n  \nCảm ơn ông/bà đã tin tưởng và sử dụng dịch vụ!"
+  - text: "Ông/bà đã đặt lịch hẹn với bác sĩ thành công. Bác sĩ liên hệ lại với ông/bà trong ít phút.  \n  \nCảm ơn ông/bà đã tin tưởng và sử dụng dịch vụ!"
 
 forms:
   user_info_form:

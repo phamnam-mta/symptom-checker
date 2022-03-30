@@ -86,6 +86,12 @@ SYMPTOM_TO_DEPT = {
     'headache':HEADACHE_DEPT
 }
 
+SYMTPOM_TO_VI = {
+    'chest_pain' : "đau ngực",
+    'fever' : "sốt",
+    'headache' : "đau đầu"
+}
+
 # CAROUSEL
 CAROUSEL = {
     "type": "template",
@@ -94,6 +100,7 @@ CAROUSEL = {
         "elements":[]
     }
 }
+
 CAROUSEL_ELEMENT = {
     "title": "", # name
     "subtitle": "", # degree
@@ -107,4 +114,8 @@ CAROUSEL_ELEMENT = {
     ]
 }
 
+AVATAR_MALE = 'https://img.freepik.com/free-vector/doctor-icon-avatar-white_136162-58.jpg'
+AVATAR_FEMALE = 'https://www.freepik.com/premium-vector/doctor-nurse-line-icon-avatar-doctor-medicine-character-doodle-line-style-vector-illustration_22528348.htm#page=3&query=doctor%20icon%20avatar%20white&position=10&from_view=search'
+
 END_MSG = 'Dựa trên các thông tin Ông/Bà cung cấp, chúng tôi xin gợi ý các bác sĩ phù hơp nhất.'
+

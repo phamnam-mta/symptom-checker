@@ -10,6 +10,13 @@ cd symptom-checker
 pip install -r requirements.txt
 ```
 
+## Setup Neo4j for RS
+```bash
+sudo systemctl start neo4j.service
+export NEO4J_URL=http://localhost:7474/
+export NEO4J_AUTH=neo4j/password
+```
+
 ## Train model by command
 
 ```bash

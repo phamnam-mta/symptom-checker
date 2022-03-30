@@ -1,27 +1,42 @@
 from typing import Any, Text, Dict, List
 
+import os
 import logging
+import copy
+
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, FollowupAction, AllSlotsReset, Restarted
-
 from actions.utils.rasa_util import (
     get_latest_bot_utter
 )
 
-from actions.rs.recommender import Recommender
+from actions.rs.src.recommender import Recommender
 from actions.rs.constants import (
     CAROUSEL,
     CAROUSEL_ELEMENT,
-    DEPARTMENT_ID,
-    END_MSG
+    AVATAR_MALE,
+    AVATAR_FEMALE,
+    END_MSG,
+    SYMTPOM_TO_VI
 )
 
 logger = logging.getLogger(__name__)
 
+
 class ActionRecommendDoctors(Action):
     def __init__(self):
-        self.rs = Recommender()
+
+        NEO4J_URL = os.getenv("NEO4J_URL", None)
+        NEO4J_AUTH = os.getenv("NEO4J_AUTH", None)
+        user = NEO4J_AUTH.split("/")[0]
+        password = NEO4J_AUTH.split("/")[1]
+
+        self.rs = Recommender(
+            NEO4J_URL,
+            user,
+            password
+        )
 
     def name(self) -> Text:
         return "action_recommend_doctors"
@@ -37,15 +52,15 @@ class ActionRecommendDoctors(Action):
             symptom = tracker.get_slot('symptom')
             bot_utter = get_latest_bot_utter(tracker)
 
-            doctors = self.rs(
-                symptom=symptom,
-                utterance=bot_utter,
-                age=age,
-                gender=gender
-            )
+            request = {
+                "symptom" : SYMTPOM_TO_VI[symptom],
+                "age" : age,
+                "gender" : gender,
+            }
+            doctors = self.rs.suggest_doctors(request)
             
             msg = self.generate_carousel(doctors)
-
+            print(msg)
             # display message
             dispatcher.utter_message(text=END_MSG)
 
@@ -61,12 +76,16 @@ class ActionRecommendDoctors(Action):
     def generate_carousel(self,doctors:List[Dict]) -> Dict:
        ''' Fill-in rasa carousel template
        '''
-       carousel = CAROUSEL
+       carousel = copy.deepcopy(CAROUSEL)
        for doctor in doctors:
-           e = CAROUSEL_ELEMENT
-           e['title'] = doctor['doctor_name']
-           e['subtitle'] = doctor['degree'] + '- Khoa ' + str(DEPARTMENT_ID[doctor['department_id']])
-           e['image_url'] = doctor['avatar']
-           
-           carousel['payload']['elements'].append(e) 
+            e = copy.deepcopy(CAROUSEL_ELEMENT)
+            e['title'] = doctor['doctor']['name']
+            e['subtitle'] = doctor['doctor']['title'] + '- Khoa ' + doctor['doctor']['speciality']
+
+            if doctor['doctor']['gender'] == 'male':
+               e['image_url'] = AVATAR_MALE
+            else:
+               e['image_url'] = AVATAR_FEMALE
+
+            carousel['payload']['elements'].append(e) 
        return carousel
